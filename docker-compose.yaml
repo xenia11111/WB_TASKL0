@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: db_taskL0
+    ports:
+      - "5436:5432"
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=admin
+    image: postgres:14.3-alpine
+  
+  nats-streaming:
+    image: library/nats-streaming:latest
+    container_name: nats-striaming_taskL0
+    ports:
+      - 4222:4222
+      - 8222:8222

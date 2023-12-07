@@ -1,0 +1,17 @@
+port: "8000"
+
+db:
+  host: "localhost"
+  port: "5436"
+  username: "admin"
+  dbname: "postgres"
+  sslmode: "disable"
+
+nats:
+  serverURL: "nats://localhost:4222"
+  clusterID: "test-cluster"
+  clientProducer: "producer"
+  clientSubscriber: "subscriber"
+
+order_json:
+  jsonFilePath: "models/model.json"
